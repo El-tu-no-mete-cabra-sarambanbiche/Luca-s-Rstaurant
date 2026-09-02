@@ -1,31 +1,28 @@
-# Luca's Restaurant
+# Colegio Valle Central
 
-Página web responsive para **Luca's Restaurant**, un restaurante en La Fortuna, Costa Rica, pensado para visitantes de Norteamérica y Europa.
+Portal institucional responsive para estudiantes, docentes y familias, preparado para publicarse en GitHub Pages.
 
-## Funciones
+## Incluye
 
-- Menú bilingüe en español e inglés.
-- Platos costarricenses, italianos y opciones vegetarianas.
-- Diseño responsive para teléfono, tablet y escritorio.
-- Área de reservas con selección de fecha, hora, cantidad de personas y mesa.
-- Disponibilidad visual de 30 mesas, con mesas libres y no disponibles.
-- Confirmación visual de la solicitud de reserva.
-- Área de pago en línea para un depósito de reserva de ₡10,000.
-- Imágenes gastronómicas y navegación por secciones.
+- Inicio de sesión visual con perfiles de estudiante y docente.
+- Enlace al sitio oficial del Ministerio de Educación Pública (MEP).
+- Directorio de docentes con filtros por departamento.
+- Horarios de atención institucional.
+- Calendario de feriados, celebraciones, vacaciones y días libres.
+- Comunicados y avisos escolares.
+- Diseño adaptable para teléfono, tablet y escritorio.
 
 ## Ejecutar localmente
 
-No requiere instalación ni dependencias. Abre `index.html` en un navegador; este archivo redirige a `Restaurante.html`.
-
-También puedes servir la carpeta con cualquier servidor web local, por ejemplo:
+Abre `index.html` en el navegador o sirve la carpeta con:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Después visita `http://localhost:8000`.
+Visita `http://localhost:8000`.
 
-## Estructura
+## Archivos
 
 ```text
 .
@@ -34,13 +31,15 @@ Después visita `http://localhost:8000`.
 └── README.md
 ```
 
-## Nota sobre reservas y pagos
+`Restaurante.html` conserva la URL anterior y redirige a `index.html`.
 
-La selección de mesas, la confirmación de reserva y el pago funcionan actualmente como demostración front-end. Los datos no se guardan y el formulario de pago no procesa tarjetas reales. Para producción se debe conectar un backend y una pasarela segura como Stripe, PayPal o el proveedor local elegido.
+## Importante sobre el inicio de sesión
+
+El formulario de acceso es un prototipo front-end: no guarda ni valida credenciales. Antes de usarlo con estudiantes o docentes, debe conectarse a un sistema real de autenticación con HTTPS, almacenamiento seguro y control de permisos. El botón del MEP dirige al sitio oficial para trámites y consultas institucionales.
 
 ## Publicar en GitHub Pages
 
-1. Sube los archivos del proyecto a un repositorio de GitHub.
-2. En el repositorio, abre **Settings > Pages**.
-3. Selecciona la rama principal y la carpeta raíz (`/root`).
-4. Guarda la configuración y abre la URL que GitHub Pages genere.
+1. Sube los archivos a la rama `main` del repositorio.
+2. Ve a **Settings > Pages**.
+3. Selecciona `Deploy from a branch`, rama `main` y carpeta `/root`.
+4. Guarda y abre la URL generada por GitHub Pages.
